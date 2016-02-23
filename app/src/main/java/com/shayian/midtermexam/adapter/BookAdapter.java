@@ -1,6 +1,7 @@
 package com.shayian.midtermexam.adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,10 @@ public class BookAdapter extends ArrayAdapter<Book> {
         if (book != null) {
             if (viewHolder.tvName != null) {
                 viewHolder.tvName.setText(book.getTitle());
+                if(book.isRead()==true)
+                {
+                    viewHolder.tvName.setPaintFlags(viewHolder.tvName.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                }
             }
         }
 

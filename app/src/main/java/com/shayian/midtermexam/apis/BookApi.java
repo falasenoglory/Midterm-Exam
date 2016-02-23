@@ -17,8 +17,7 @@ import java.util.ArrayList;
  */
 public class BookApi {
 
-    public static ArrayList<Book> LBook;
-    public static final String BASE_URL     = "http://172.17.3.51:5856/api/books";
+    public static ArrayList<Book> LBook = new ArrayList<>();
 
     public static ArrayList<Book> getBook(String uri, @NonNull String requestMethod) {
         String json = HttpUtils.getResponse(uri, requestMethod);

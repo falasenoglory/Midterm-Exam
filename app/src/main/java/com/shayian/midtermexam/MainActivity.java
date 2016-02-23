@@ -14,11 +14,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mListViewFragment = ListViewFragment.newInstance();
 
-
-
-
-
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, mListViewFragment)
+                .commit();
 
     }
 
